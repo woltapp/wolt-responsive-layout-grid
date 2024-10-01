@@ -26,7 +26,7 @@ class WoltScreenWidthAdaptiveWidget extends StatelessWidget {
     super.key,
     required this.smallScreenWidthChild,
     required this.largeScreenWidthChild,
-    this.widthBreakPoint = 768,
+    this.widthBreakPoint = defaultWidthBreakPoint,
   });
 
   /// The child widget to be displayed when the screen width is below the `widthBreakPoint`.
@@ -36,7 +36,7 @@ class WoltScreenWidthAdaptiveWidget extends StatelessWidget {
   final Widget largeScreenWidthChild;
 
   /// By default, the `widthBreakPoint` is set to 768, which corresponds to the common breakpoint between small and large screens.
-  static const defaultWidthBreakPoint = 768;
+  static const defaultWidthBreakPoint = 768.0;
 
   /// The screen width breakpoint to determine the adaptive behavior.
   /// If the screen width is below this breakpoint, the `smallScreenWidthChild` will be displayed;
